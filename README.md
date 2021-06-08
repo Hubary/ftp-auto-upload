@@ -12,7 +12,9 @@ npm install @hubary/ftp-auto-upload -D
 
 ## 使用
 
-### 1. 项目根目录新建remote.config.js文件进行服务器的信息配置
+### 1. 项目根目录新建ftp.config.js文件进行服务器的信息配置
+
+
   
 ```javascript
 module.exports = [
