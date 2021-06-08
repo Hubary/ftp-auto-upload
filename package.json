@@ -1,0 +1,41 @@
+{
+  "name": "@hubary/ftp-auto-upload",
+  "version": "1.0.0",
+  "description": "一款刀耕火种时期,提高生产效率的工具,用于删除/更新node打包后的文件到指定的服务器位置",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "upload": "node index.js"
+  },
+  "author": "hubary",
+  "email": "hubary@qq.com",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "inquirer": "^8.1.0",
+    "ora": "^5.4.0",
+    "ssh2-sftp-client": "^6.0.1"
+  },
+  "files": [
+    "index.js",
+    "helper.js",
+    "remote.config.js",
+    "package.json"
+  ],
+  "bugs": {
+    "url": "https://github.com/Hubary/ftp-auto-upload/issues"
+  },
+  "homepage": "https://github.com/Hubary/ftp-auto-upload",
+  "keywords": [
+    "@hubary/ftp-auto-upload",
+    "ftp-auto-upload",
+    "hubary",
+    "ftp",
+    "sftp",
+    "ssh2-sftp-client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hubary/ftp-auto-upload.git"
+  }
+}
