@@ -58,4 +58,6 @@ module.exports = [
 }
 ```
 
-### 3 运行npm run upload即可`删除/更新`服务器指定位置代码
+### 3 运行 `npm run upload` 即可`删除/更新`服务器指定位置代码
+
+![image](assets/running.png)

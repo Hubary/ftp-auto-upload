@@ -20,7 +20,8 @@
     "index.js",
     "helper.js",
     "remote.config.js",
-    "package.json"
+    "package.json",
+    "assets"
   ],
   "bugs": {
     "url": "https://github.com/Hubary/ftp-auto-upload/issues"
