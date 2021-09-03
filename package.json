@@ -1,6 +1,6 @@
 {
   "name": "@hubary/ftp-auto-upload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一款刀耕火种时期,提高生产效率的工具,用于删除/更新node打包后的文件到指定的服务器位置",
   "main": "index.js",
   "private": false,
