@@ -3,3 +3,5 @@ package-lock.json
 dist/
 ROOT/
 ftp.config.demo.js
+
+dist-*/

@@ -1,38 +1,41 @@
-const inquirer = require('inquirer')
-new inquirer.Separator()
-const selectTip = 'project name:'
+const inquirer = require('inquirer');
+new inquirer.Separator();
+const selectTip = 'project name:';
 const options = [
   {
     type: 'list',
     name: selectTip,
     message: 'Which project do you want to deploy?',
-    choices: []
-  }
-]
+    choices: [],
+  },
+];
 
 // 显示选择提示窗
 function showHelper(config) {
   return new Promise((resolve, reject) => {
-    initHelper(config) // 初始化helper
-    inquirer.prompt(options).then(answers => {
-      console.log(answers)
-      resolve({ value: findInfoByName(config, answers[selectTip]) }) // 查找所选配置项
-    }).catch((err) => {
-      reject(console.error(' helper显示或选择出错！', err))
-    })
-  })
+    initHelper(config); // 初始化helper
+    inquirer
+      .prompt(options)
+      .then((answers) => {
+        console.log(answers);
+        resolve({ value: findInfoByName(config, answers[selectTip]) }); // 查找所选配置项
+      })
+      .catch((err) => {
+        reject(console.error(' helper显示或选择出错！', err));
+      });
+  });
 }
 
 // 初始化helper
 function initHelper(config) {
   for (let item of config) {
-    options[0].choices.push(item.name)
+    options[0].choices.push(item.name);
   }
-  console.log('正在检查全局配置信息...')
+  console.log('正在检查配置...');
   // 检查是否存在相同name
   if (new Set(options[0].choices).size !== options[0].choices.length) {
-    console.error('请检查配置信息，存在相同name！')
-    process.exit()
+    console.error('请检查配置信息，存在相同name！');
+    process.exit();
   }
 }
 
@@ -40,9 +43,9 @@ function initHelper(config) {
 function findInfoByName(config, name) {
   for (let item of config) {
     if (item.name === name) {
-      return item
+      return item;
     }
   }
 }
 
-module.exports = showHelper
+module.exports = showHelper;
